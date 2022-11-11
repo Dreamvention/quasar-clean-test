@@ -1,0 +1,24 @@
+name: deploy
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  check-code-standards:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 16 ]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Starting node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Installing packages
+        run: npm install
+      - name: Running ESLint
+        run: npm run lint
+      - name: Running Prettier
+        run: npm run format

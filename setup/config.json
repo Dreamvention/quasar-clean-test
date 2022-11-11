@@ -1,0 +1,7 @@
+{
+  "apiBaseURL": "https://dominos-aus-dev.cosocloud.com/api/",
+  "authApiBaseURL": "https://dominos-aus-dev.cosocloud.com/prime-auth-api/",
+  "primeApiBaseURL": "https://learningmanager.adobe.com/",
+  "primeClientId": "a8266d89-c7e9-4ea3-bc63-3f8b1e328b2a",
+  "primeAccountId": 19360
+}

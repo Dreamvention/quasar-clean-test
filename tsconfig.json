@@ -1,0 +1,44 @@
+{
+  "extends": "@quasar/app-vite/tsconfig-preset",
+  "compilerOptions": {
+    "allowJs": true,
+    "sourceMap": true,
+    "target": "es6",
+    "strict": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "types": ["quasar", "node", "lodash", "jest", "cypress", "@ionic-native"],
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "lib": ["esnext", "dom", "es5", "dom.iterable", "scripthost"],
+    "baseUrl": ".",
+    "paths": {
+      "setup/*": ["setup/*"],
+      "data/*": ["data/*"],
+      "domain/*": ["domain/*"],
+      "modules/*": ["modules/*"],
+      "src/*": ["src/*"],
+      "app/*": ["*"],
+      "components/*": ["src/components/*"],
+      "layouts/*": ["src/layouts/*"],
+      "pages/*": ["src/pages/*"],
+      "assets/*": ["src/assets/*"],
+      "boot/*": ["src/boot/*"],
+      "stores/*": ["src/stores/*"]
+    }
+  },
+  "include": [
+    "data/**/*",
+    "domain/**/*",
+    "setup/**/*",
+    "modules/**/*",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ]
+}
